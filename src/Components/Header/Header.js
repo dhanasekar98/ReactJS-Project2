@@ -14,7 +14,6 @@ border-top-left-radius: 25px;
 border-top-right-radius: 25px;
 border-bottom:1px solid #999;
 
-
 .input{
     font-size:25px;
     background:#262626;
@@ -35,9 +34,15 @@ div{
     text-transform:uppercase;
     margin-left:5%;
 }
+
+`;
+const Bottom = Styled.footer`
+background-color:#345;
+height:550px;
+
 `;
 
-const Header = () => {
+const Header = (props) => {
   return (
     <div>
       <MyHeader>
@@ -50,7 +55,9 @@ const Header = () => {
         />
         <Profile />
       </MyHeader>
-      <Slider />
+      <Bottom className="bottom">
+        <Slider />
+      </Bottom>
     </div>
   );
 };

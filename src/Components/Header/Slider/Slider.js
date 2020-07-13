@@ -1,5 +1,6 @@
 import React from 'react';
 import Styled from 'styled-components';
+import Poster from './Poster/Poster';
 
 const Button = Styled.button`
 font-family:sans-serif;
@@ -24,7 +25,7 @@ const MySlider = Styled.div`
 }
 `;
 
-const Slider = (props) => {
+const Slider = () => {
   function openSilde() {
     document.getElementById('menu').style.width = '450px';
     document.getElementById('content').style.marginRight = '0px';
@@ -37,6 +38,7 @@ const Slider = (props) => {
     <MySlider>
       <div id="content">
         <Button onClick={openSilde}>Clickme</Button>
+        <Poster />
         <div id="menu" className="nav">
           <Button onClick={CloseSlide}>Close me</Button>
         </div>
